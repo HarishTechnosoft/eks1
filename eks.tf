@@ -10,11 +10,11 @@ module "eks"{
     }
 
     vpc_id = module.vpc.vpc_id
-    workers_group_defaults = {
+    worker_groups_defaults = {
         root_volume_type = "gp2"
     }
 
-    workers_group = [
+    worker_groups = [
         {
             name = "Worker-Group-1"
             instance_type = "t2.micro"
