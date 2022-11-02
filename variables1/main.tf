@@ -40,3 +40,7 @@ resource "aws_vpc" "my-vpc" {
     }
 
 }
+
+output "vpcid" {
+    value = aws_vpc.my-vpc.id
+}
